@@ -2,27 +2,31 @@
 
 ## Description
 
-The HolyGrail full stack project is a web layout built using modern web technologies. Named after the "Holy Grail" layout pattern, it presents a visually appealing and responsive design that consists of five distinct sections: header, left sidebar, main content area, right sidebar, and footer.
+The HolyGrail full stack project is a web layout built using modern web technologies. It leverages Docker Desktop for containerization, enabling streamlined deployment and management of the application's components. The project includes React, Express.js, Redis, and ioredis, to create the engaging and dynamic layout. Named after the "Holy Grail" layout pattern, it presents a visually appealing and responsive design that consists of five distinct sections: header, left sidebar, main content area, right sidebar, and footer.
 
 ## Dependencies
 
-(note: both React and Express are currently port 3000)
+### Backend:
 
-- Backend:
+1. Install the Express server: `npm install express`
+2. Then run the container for Docker: `docker run -p 6379:6379 --name some-redis -d redis`
+3. Install redis: `npm install redis`
+4. Install ioredis: `npm install ioredis`
+5. Install cors: `npm install cors`
+6. Then use `node key_get_set.js` and `crtl c` to close.
+7. Then use `node index.js` which will start the Express.js server on port 3000 within a Docker container.
 
-1. `npm install express` then `node index.js` to spin port 3000 up for the server.
-2. Install redis: `npm install redis`
-3. Install ioredis which has more features: `npm install ioredis`
-4. Install cors: `npm install cors`
-5. Then use `node key_get_set.js`
-
-- Frontend:
+### Frontend:
 
 1. `npm install superagent`
 
+## Usage
+
+After installing the required dependencies, you can access and interact with the HolyGrail layout through your web browser. The project's frontend and backend run on port 3000, providing a seamless user experience.
+
 ## Roadmap of Future Improvement
 
-Improve the Holy Grail layout, add more content, and connect with Docker.
+Improve the Holy Grail layout with more appealing content and styles.
 
 ## License Info
 
